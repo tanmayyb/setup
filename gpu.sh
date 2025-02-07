@@ -12,5 +12,5 @@ echo "Installing latest drivers"
 # cat /proc/driver/nvidia/version # checks current driver version
 sudo ubuntu-drivers list # list drivers
 # sudo ubuntu-drivers install # auto-install
-sudo ubuntu-drivers --gpgpu install nvidia:535 -y # manual install: we have RTX3070 '--gpgpu' because we will use compute capability
+sudo ubuntu-drivers --gpgpu install nvidia:535 # manual install: we have RTX3070 '--gpgpu' because we will use compute capability
 sudo apt-get install nvidia-cuda-toolkit -y
