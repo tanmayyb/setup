@@ -33,7 +33,7 @@ sudo egpu-switcher enable
 
 # Install AppImageLauncher
 echo "Installing AppImageLauncher..."
-mkdir appimages
+mkdir ~/appimages
 wget -qO appimagelauncher.deb https://github.com/TheAssassin/AppImageLauncher/releases/download/v2.2.0/appimagelauncher_2.2.0-travis995.0f91801.bionic_amd64.deb
 sudo dpkg -i appimagelauncher.deb || sudo apt-get -f install -y
 rm appimagelauncher.deb

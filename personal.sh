@@ -11,7 +11,7 @@ sudo snap install code --classic
 # install cursor
 wget https://downloader.cursor.sh/linux/appImage/x64 -O cursor.AppImage
 sudo chmod +x cursor.AppImage
-mv cursor.AppImage appimages
+mv cursor.AppImage ~/appimages
 
 # Setup Git credentials
 echo "Setting up Git credentials..."
