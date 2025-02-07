@@ -24,12 +24,11 @@ sudo apt update && sudo apt install ros-dev-tools
 sudo apt update
 sudo apt upgrade
 
-sudo apt install ros-jazzy-desktop
+sudo apt install ros-humble-desktop
 sudo apt install python3-colcon-clean
 sudo apt install python3-colcon-common-extensions
 
 sudo rosdep init
 rosdep update
 
-# source /opt/ros/jazzy/setup.bash
-echo 'source /opt/ros/jazzy/setup.bash to activate'
+echo 'source /opt/ros/humble/setup.bash to activate'
