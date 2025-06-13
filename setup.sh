@@ -44,7 +44,17 @@ sudo apt install libfuse2
 
 
 # Installing other packages
-sudo apt install -y vlc obs-studio
+sudo apt install -y vlc obs-studio samba
+# samba: allows for network sharing directories:
+# sudo nano /etc/samba/smb.conf
+# [exported]
+#    path = <full-dir-path>
+#    browseable = yes
+#    writable = yes
+#    guest ok = yes
+#    create mask = 0775
+#    directory mask = 0775
+# sudo systemctl restart smbd
 
 # Cleanup
 echo "Cleaning up..."
