@@ -51,9 +51,8 @@ fi
 conda config --set auto_activate_base false
 conda deactivate
 
-# CUDA and PyTorch installation
+# CUDA installation
 echo "Installing required packages..."
-conda install -y cuda -c nvidia/label/cuda-12.1.0
-conda install -y 'pytorch>2.0.1' torchvision torchaudio pytorch-cuda=12.1 -c pytorch-nightly -c nvidia/label/cuda-12.1.0
+conda install -y cuda -c nvidia/label/cuda-12.8
 
 echo "CUDA Setup complete."
