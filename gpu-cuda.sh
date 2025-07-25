@@ -12,9 +12,9 @@ echo "Installing latest drivers"
 # cat /proc/driver/nvidia/version # checks current driver version
 sudo ubuntu-drivers list # list drivers
 # sudo ubuntu-drivers install # auto-install
-sudo ubuntu-drivers --gpgpu install nvidia:550 # manual install: we have RTX3070 '--gpgpu' because we will use compute capability
+sudo ubuntu-drivers --gpgpu install nvidia:570 # manual install: we have RTX3070 '--gpgpu' because we will use compute capability
 
-# from: https://developer.nvidia.com/cuda-12-6-0-download-archive?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=22.04&target_type=deb_network
+# from: https://developer.nvidia.com/cuda-12-8-0-download-archive?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=22.04&target_type=deb_network
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-keyring_1.1-1_all.deb
 sudo dpkg -i cuda-keyring_1.1-1_all.deb
 sudo apt-get update
