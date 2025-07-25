@@ -5,6 +5,7 @@ set -e  # Exit immediately if a command exits with a non-zero status
 # Update and upgrade the system
 echo "Updating and upgrading system packages..."
 sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y
+sudo add-apt-repository -y universe && sudo apt update
 
 # Install essential packages
 echo "Installing essential packages..."
