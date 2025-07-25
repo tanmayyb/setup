@@ -12,6 +12,14 @@ echo "Installing latest drivers"
 # cat /proc/driver/nvidia/version # checks current driver version
 sudo ubuntu-drivers list # list drivers
 # sudo ubuntu-drivers install # auto-install
+
+# for 550+ drivers:
+sudo apt install gcc-12 g++-12
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-12 100
+sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-12 100
+sudo update-alternatives --config gcc # fix the default compiler to be gcc-12
+
+# install drivers
 sudo ubuntu-drivers --gpgpu install nvidia:570 # manual install: we have RTX3070 '--gpgpu' because we will use compute capability
 
 # from: https://developer.nvidia.com/cuda-12-8-0-download-archive?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=22.04&target_type=deb_network
