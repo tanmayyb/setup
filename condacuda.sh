@@ -53,6 +53,7 @@ conda deactivate
 
 # CUDA installation
 echo "Installing required packages..."
-conda install -y cuda -c nvidia/label/cuda-12.8
+conda install -y cuda -c nvidia/label/cuda-12.6.3
+conda install -y pytorch torchvision torchaudio pytorch-cuda=12.6 -c pytorch -c nvidia
 
 echo "CUDA Setup complete."
