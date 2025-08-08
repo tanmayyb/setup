@@ -13,8 +13,15 @@ sudo apt install -y curl git cmake build-essential python3 python3-pip
 sudo apt install -y  terminator htop net-tools openssh-server
 
 # Install Barrier
-echo "Installing Barrier..."
-sudo apt install -y barrier
+# echo "Installing Barrier..."
+# sudo apt install -y barrier
+
+echo "Installing Flatpak"
+sudo apt install -y flatpak gnome-software-plugin-flatpak
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+echo "Installing Deskflow"
+flatpak install -y flathub org.deskflow.deskflow
 sudo systemctl enable ssh
 sudo systemctl start ssh
 
@@ -72,7 +79,8 @@ echo "\nSetup complete! Installed components include:"
 echo "- Git"
 echo "- terminator"
 echo "- htop"
-echo "- Barrier"
+echo "- flatpak"
+echo "- Deskflow"
 echo "- VLC"
 echo "- OBS Studio"
 echo "- NoMachine"
