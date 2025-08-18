@@ -20,14 +20,14 @@ sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-12 100
 sudo update-alternatives --config gcc # fix the default compiler to be gcc-12
 
 # install drivers
-sudo ubuntu-drivers --gpgpu install nvidia:570 # manual install: we have RTX3070 '--gpgpu' because we will use compute capability
+sudo ubuntu-drivers --gpgpu install nvidia:550 # manual install: we have RTX3070 '--gpgpu' because we will use compute capability
 
 # from: https://developer.nvidia.com/cuda-12-8-0-download-archive?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=22.04&target_type=deb_network
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-keyring_1.1-1_all.deb
 sudo dpkg -i cuda-keyring_1.1-1_all.deb
 sudo apt-get update
-sudo apt-get -y install cuda-toolkit-12-8
-echo 'export PATH=/usr/local/cuda-12.8/bin:$PATH' >> ~/.bashrc
-echo 'export LD_LIBRARY_PATH=/usr/local/cuda-12.8/lib64:$LD_LIBRARY_PATH' >> ~/.bashrc
+sudo apt-get -y install cuda-toolkit-12-6
+echo 'export PATH=/usr/local/cuda-12.6/bin:$PATH' >> ~/.bashrc
+echo 'export LD_LIBRARY_PATH=/usr/local/cuda-12.6/lib64:$LD_LIBRARY_PATH' >> ~/.bashrc
 
 echo 'done! <3'
