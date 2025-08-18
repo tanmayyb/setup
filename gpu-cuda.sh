@@ -14,10 +14,10 @@ sudo ubuntu-drivers list # list drivers
 # sudo ubuntu-drivers install # auto-install
 
 # for 550+ drivers:
-sudo apt install gcc-12 g++-12
-sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-12 100
-sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-12 100
-sudo update-alternatives --config gcc # fix the default compiler to be gcc-12
+# sudo apt install gcc-12 g++-12
+# sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-12 100
+# sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-12 100
+# sudo update-alternatives --config gcc # fix the default compiler to be gcc-12
 
 # install drivers
 sudo ubuntu-drivers --gpgpu install nvidia:550 # manual install: we have RTX3070 '--gpgpu' because we will use compute capability
