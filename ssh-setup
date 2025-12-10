@@ -1,0 +1,49 @@
+ssh-keygen -t ed25519 -C "your_email@example.com"
+eval "$(ssh-agent -s)" (in another terminal)
+ssh-add ~/.ssh/id_ed25519
+cat ~/.ssh/id_ed25519.pub (public key)
+
+
+4. Add the Public Key to GitHub
+Log into your GitHub account.
+
+Navigate to Settings (profile photo menu).
+
+In the sidebar, click SSH and GPG keys.
+
+Click New SSH key or Add SSH key.
+
+Provide a descriptive Title for the key (e.g., "Work Laptop").
+
+Paste the content of your public key into the Key field.
+
+Click Add SSH key.
+
+5. Add the Public Key to GitLab
+Log into your GitLab account.
+
+Select your avatar in the upper-right corner.
+
+Select Edit profile or Settings.
+
+In the left sidebar, select SSH Keys.
+
+Click Add new key.
+
+Paste the content of your public key into the Key box.
+
+Provide a descriptive Title.
+
+Click Add key.
+
+
+. Test the Connection
+After adding the key to each service, test the connection to verify authentication:
+
+GitHub: ssh -T git@github.com
+
+Expected success message: Hi username! You've successfully authenticated, but GitHub does not provide shell access.
+
+GitLab: ssh -T git@gitlab.com
+
+Expected success message: Welcome to GitLab, @username!
