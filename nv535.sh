@@ -15,4 +15,6 @@ sudo apt install nvidia-utils-535 -y
 # 5. Verify installation status
 dpkg -l | grep nvidia-driver-535
 
+sudo apt-mark hold "^libnvidia-.*" "^nvidia-.*"
+
 echo "Installation complete. Reboot is required to load the driver."
